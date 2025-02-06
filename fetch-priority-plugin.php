@@ -1,25 +1,4 @@
-<?php
-/*
-Plugin Name: Fetch Priority Hook
-Plugin URI: https://github.com/donjohann/fetch-priority
-Description: This plugin enhances the WordPress block editor by adding a fetchpriority attribute to the Image and Cover blocks. The fetchpriority attribute helps optimize loading behavior by prioritizing specific images for faster rendering, improving Core Web Vitals and overall page performance.
-  
-  With this plugin, users can easily configure the fetchpriority setting directly from the block settings panel in the editor. Available options include:
-  
-  Default (empty) – No priority set, follows browser behavior.
-  High – Marks the image as a high priority, ensuring it loads sooner.
-  Auto – Allows the browser to decide the priority dynamically.
-  By using this feature, developers and content creators can fine-tune image loading strategies to improve page speed and user experience.
-Version: 1.1
-Author: Johan Wistbacka
-Author URI: https://wistbacka.se
-License: GPL2
-*/
-?>
-<?php // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock
-// Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock
-// Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock
-// Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock
+<?php // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock // Registrera hookar för att lägga till fetchpriority-attribut på bild- och omslagsblock
 
 add_filter(
   "render_block",
@@ -74,4 +53,3 @@ add_action("enqueue_block_editor_assets", function () {
     filemtime(plugin_dir_path(__FILE__) . "fetchpriority-block-control.js")
   );
 });
-
