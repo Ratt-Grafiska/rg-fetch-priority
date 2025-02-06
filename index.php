@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Fetch Priority Hook
-Plugin URI: https://github.com/donjohann/fetch-priority
+Plugin URI: https://github.com/Ratt-Grafiska/rg-fetch-priority
 Description: This plugin enhances the WordPress block editor by adding a fetchpriority attribute to the Image and Cover blocks. The fetchpriority attribute helps optimize loading behavior by prioritizing specific images for faster rendering, improving Core Web Vitals and overall page performance.
 
 With this plugin, users can easily configure the fetchpriority setting directly from the block settings panel in the editor. Available options include:
