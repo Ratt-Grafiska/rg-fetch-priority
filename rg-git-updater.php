@@ -23,7 +23,7 @@ class RgGitUpdater
     $plugin_data = get_file_data($this->plugin_file, [
       "Version" => "Version",
       "Author" => "Author",
-      "PluginURI" => "Plugin URI",
+      "UpdateURI" => "Update URI",
       "PluginName" => "Plugin Name",
       "Description" => "Description",
     ]);
@@ -33,7 +33,7 @@ class RgGitUpdater
     $this->plugin_name = $plugin_data["PluginName"];
     $this->plugin_description = $plugin_data["Description"];
     $this->github_repo = trim(
-      parse_url($plugin_data["PluginURI"], PHP_URL_PATH),
+      parse_url($plugin_data["UpdateURI"], PHP_URL_PATH),
       "/"
     );
     add_filter("pre_set_site_transient_update_plugins", [

@@ -1,7 +1,8 @@
 <?php
 /*
-Plugin Name: RG Fetch Priority
-Plugin URI: https://github.com/Ratt-Grafiska/rg-fetch-priority
+Plugin Name: Rätt Grafiska Fetch Priority
+Plugin URI: https://github.com/Ratt-Grafiska/
+Update URI: https://github.com/Ratt-Grafiska/rg-fetch-priority
 Description: This plugin enhances the WordPress block editor by adding a fetchpriority attribute to the Image and Cover blocks. The fetchpriority attribute helps optimize loading behavior by prioritizing specific images for faster rendering, improving Core Web Vitals and overall page performance.
 
 With this plugin, users can easily configure the fetchpriority setting directly from the block settings panel in the editor. Available options include:
@@ -11,14 +12,16 @@ With this plugin, users can easily configure the fetchpriority setting directly 
 - Auto – Allows the browser to decide the priority dynamically.
 
 By using this feature, developers and content creators can fine-tune image loading strategies to improve page speed and user experience.
-Version: 1.0.5
+Version: 1.0.6
 Author: Johan Wistbacka
 Author URI: https://wistbacka.se
 License: GPL2
 */
 
 // Initiera uppdateraren
-require_once plugin_dir_path(__FILE__) . "git-updater.php";
+if (!class_exists("RgGitUpdater")) {
+  require_once plugin_dir_path(__FILE__) . "rg-git-updater.php";
+}
 
 require_once plugin_dir_path(__FILE__) . "fetch-priority-plugin.php";
 
@@ -54,13 +57,11 @@ function fetchpriority_settings_page()
         <p><strong>Version:</strong> <?php echo esc_html(
           $plugin_data["Version"]
         ); ?></p>
-        <p><strong>Author:</strong> <?php echo esc_html(
-          $plugin_data["Author"]
-        ); ?></p>
+        <p><strong>Author:</strong> <?php echo $plugin_data["Author"]; ?></p>
         <p><strong>GitHub Repository:</strong> <a href="<?php echo esc_url(
-          $plugin_data["PluginURI"]
+          $plugin_data["UpdateURI"]
         ); ?>" target="_blank"><?php echo esc_html(
-  $plugin_data["PluginURI"]
+  $plugin_data["UpdateURI"]
 ); ?></a></p>
     </div>
     <?php
